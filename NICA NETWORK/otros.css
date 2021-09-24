@@ -1,0 +1,175 @@
+/* Esto es un comentario
+aqui estoy quitando los bordes que vienen por defecto en el navegador*/
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/*Esto afecta todo el cuerpo de la página*/
+body{
+    background: whitesmoke;
+}
+
+/*Aqui estoy diciendo que una lo que tenga la clase "navegacion" va a ser afectada con lo que ponga ahí.
+LAS CLASES SE LLAMAN CON UN PUNTO ANTES (BUSCAR HERARQUIA EN CSS)*/
+.navegacion{
+    width: 1200px;
+    margin: 5px auto;
+    height: 98px;
+    background: #033252;
+    padding: 50px;
+
+
+}
+.navegacion ul{
+    list-style: none;
+}
+
+.menu > li{
+    text-align: center;
+    position: relative;
+    display: inline-block; /*esto hace que queden al lado y no debajo*/
+}
+
+.menu > li > a{
+    display: block;
+    padding: 15px 20px; /*relleno*/
+    color: #EEEEEE;
+    font-family: Helvetica;
+    text-decoration: none;
+}
+/*Al pasar el mouse por encima de las palabras quiero que cambie de color, transition hace que no sea inmediato
+semora 3 segundos en suceder*/
+.menu > li > a:hover{
+    color: #80ED99;
+    transition: all .3s;
+
+}
+
+
+/*SUB MENU*/
+
+.sub-menu{
+    width: 140%;
+    position: absolute;
+    background: #033252;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1.5s;
+}
+
+.sub-menu li a{
+    display: block;
+    padding: 15px;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: none;
+}
+
+.sub-menu li a:hover{
+    color: #80ED99;
+    transition: all .3s;
+}
+
+.menu li:hover .sub-menu{
+    visibility:visible;
+    opacity: 1;
+}
+/*--------------------*/
+.logo{
+
+    width: 150px;
+    height: 99px;
+    border-radius: 10%;
+}
+
+.logo-menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+/*------------------------------*/
+.caja{
+    border: 1px solid rgb(231, 231, 231);
+    align-items: center;
+    font-size: 12px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.caja img{
+    border-radius: 10px;
+    width: 150px;
+    height: 100px;
+    
+
+}
+.caja a {
+    text-decoration: none;
+    color: #333;
+}
+.big-box{
+
+    width: 1200px;
+    height: 900px;
+    margin-left: 55px;
+    display: grid;
+    grid-template-columns: 40% 40% 15%;/*Definimos cuantas columnas queremos, en este caso 3*/
+    grid-template-rows: 30% 30% 30% 10%;
+}
+
+.c0{
+    background: rgba(29, 0, 0, 0.5);
+
+    grid-row-start: 1;
+    grid-row-end: 4;
+    grid-column-start: 3;
+    grid-column-end: 3;
+    
+    padding-top: 150px;
+    align-items: center;
+}
+.c0 h2{
+    color:wheat
+}
+.c0 .p{
+    margin: 10px 5px;
+}
+.c1{
+    background: whitesmoke;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    
+    padding: 20px;
+}
+.c1 h1{
+    color: #333;
+    font-size: 60px;
+}
+.c1 p{
+    color: #333;
+    font-size: 15px;
+    font-family: Helvetica;
+    text-align: center ;
+}
+
+/*FOOTER*/
+.c6{
+    margin-top: 30px;
+    background: rgb(207, 205, 205);
+    grid-row-start: 4;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    border: none;
+    padding: 10px;
+}
+.c6 h2{
+    font-size: 12px;
+    font-family: Helvetica;
+}
